@@ -8,7 +8,7 @@ class Curso(models.Model):
     ativo = models.BooleanField(default=True)
 
     class Meta:
-        oredering = ('codigo',)
+        ordering = ('codigo',)
 
     def __str__(self):
         return self.codigo

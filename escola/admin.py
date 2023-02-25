@@ -7,9 +7,10 @@ admin.site.register(Matricula)
 
 @admin.register(Aluno)
 class AlunoAdmin(admin.ModelAdmin):
-    list_display = ('id', 'nome', 'rg', 'cpf', 'ativo')
+    list_display = ('id', 'nome', 'rg', 'cpf', 'data_nascimento', 'ativo')
     list_display_links = ('id', 'nome')
-    list_editable = ('nome', 'ativo')
+    list_editable = ('ativo',)
+    list_per_page = 6
     list_filter = ('nome', 'cpf', 'rg', 'ativo')
 
 
@@ -17,5 +18,5 @@ class AlunoAdmin(admin.ModelAdmin):
 class CursoAdmin(admin.ModelAdmin):
     list_display = ('id', 'codigo', 'descricao', 'nivel', 'ativo')
     list_display_links = ('id', 'codigo')
-    list_editable = ('codigo', 'ativo')
+    list_editable = ('ativo',)
     list_filter = ('codigo', 'nivel', 'ativo')

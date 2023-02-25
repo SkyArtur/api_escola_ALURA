@@ -8,5 +8,8 @@ class Matricula(models.Model):
     ativo = models.BooleanField(default=True)
     data_criacao = models.DateTimeField(auto_now_add=True)
 
+    class Meta:
+        ordering = ('turno', 'id')
+
     def __str__(self):
         return f'{self.id:0>9} - {self.turno} - {self.aluno.nome} - {self.curso.descricao}'
