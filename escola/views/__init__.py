@@ -1,4 +1,6 @@
 from rest_framework import viewsets, generics
+from rest_framework.authentication import BasicAuthentication
+from rest_framework.permissions import IsAuthenticated
 from escola.serializer import (
     Curso, CursoSerializer, Aluno, AlunoSerializer, Matricula,
     MatriculaSerializer, ListaDeMatriculasDoAlunoSerializer,

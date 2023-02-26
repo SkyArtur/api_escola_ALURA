@@ -6,4 +6,5 @@ class ListaDeMatriculasDoAlunoViewSet(generics.ListAPIView):
         queryset = Matricula.objects.filter(aluno_id=self.kwargs['pk'])
         return queryset
     serializer_class = ListaDeMatriculasDoAlunoSerializer
-
+    authentication_classes = [BasicAuthentication]
+    permission_classes = [IsAuthenticated]
