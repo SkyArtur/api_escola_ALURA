@@ -65,11 +65,11 @@ WSGI_APPLICATION = 'setup.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'alura_api_escola',
-        'USER': 'skyartur',
-        'PASSWORD': '05111982',
-        'HOST': 'localhost',
-        'POST': '5432'
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',
+        'POST': ''
     }
 }
 
