@@ -1,9 +1,9 @@
 from escola.views import *
 
 
-class MatriculaDoAlunoViewSet(generics.ListAPIView):
+class ListaDeMatriculasDoAlunoViewSet(generics.ListAPIView):
     def get_queryset(self):
         queryset = Matricula.objects.filter(aluno_id=self.kwargs['pk'])
         return queryset
-    serializer_class = MatriculaDoAlunoSerializer
+    serializer_class = ListaDeMatriculasDoAlunoSerializer
 

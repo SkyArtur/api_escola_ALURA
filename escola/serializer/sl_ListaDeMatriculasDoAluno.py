@@ -1,7 +1,7 @@
 from escola.serializer import *
 
 
-class MatriculaDoAlunoSerializer(serializers.ModelSerializer):
+class ListaDeMatriculasDoAlunoSerializer(serializers.ModelSerializer):
     curso = serializers.ReadOnlyField(source='curso.descricao')
     turno = serializers.SerializerMethodField()
 
